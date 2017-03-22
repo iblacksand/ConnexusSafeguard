@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Connexus Safeguard
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.11
 // @description  Protects yourself from accidently refreshing the page or clicking a lesson that changes the page. 
 // @author       John Elizarraras
 // @include      https://www.connexus.com/content/*

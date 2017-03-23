@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Connexus Safeguard
 // @namespace    https://iblacksand.github.io/post/ConnexusSafeguard/
-// @version      0.21
+// @version      0.3
 // @description  Protects yourself from accidently refreshing the page or clicking a lesson that changes the page. 
 // @author       John Elizarraras
 // @include      https://www.connexus.com/content/*
@@ -14,8 +14,12 @@
     window.onbeforeunload = function(){
   return 'Are you sure you want to leave?';
 };
-    var x = document.getElementsByClassName("lessonTreeNode");
-    for(var i = 0, max = x.length; i < max; i++)x[i].addEventListener('click', function() {
-    return confirm('Are you sure you want to leave?');
+    var elems = document.getElementsByClassName("lessonTreeNode");
+    var confirmIt = function (e) {
+        if (!confirm('Are you sure?')) e.preventDefault();
+    };
+    for (var i = 0, l = elems.length; i < l; i++) {
+        elems[i].addEventListener('click', confirmIt, false);
+    }
 }, false);
 })();

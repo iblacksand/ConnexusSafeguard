@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Connexus Safeguard
 // @namespace    https://iblacksand.github.io/post/ConnexusSafeguard/
-// @version      0.23
+// @version      0.24	
 // @description  Protects yourself from accidently refreshing the page or clicking a lesson that changes the page. 
 // @author       John Elizarraras
 // @include      https://www.connexus.com/content/*
